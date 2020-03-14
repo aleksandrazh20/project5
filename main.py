@@ -1,7 +1,7 @@
 # Вариант 1, бинарный поиск
 
 import time
-
+# Бинарный поиск рекурсией
 def binary_search_rec(a,n):
     if len(a) == 0:
         return None
@@ -15,6 +15,7 @@ def binary_search_rec(a,n):
         else:
             return binary_search_rec(a[mid + 1:],n)
 
+# Бинарный поиск итеративно
 def binary_search_it(a,n):
     mid = len(a) // 2
     first = 0
@@ -36,6 +37,7 @@ def binary_search_it(a,n):
 a = list(map(int, input().split()))
 n = int(input())
 type = input('Recursion, iteration: ').lower()
+# Выбор функции(рекурсия, итерация)
 if type == 'recursion':
     print(binary_search_rec(a,n))
     start = time.time()
